@@ -23,7 +23,7 @@ cat example.script | ./r2d2.sed | tr 10 '~\n' > /dev/dsp
 
 (`> /dev/dsp` should be changed to an appropriate thing that works on your system.)
 
-Supported commands (all numbers are in base 1) a sequence of which can be feed to the stdin:
+Supported commands (all numbers are in base 1) a sequence of which can be fed to the stdin:
 ```
 seed <random_seed>;
 glissando <direction> <initial_frequency> <final_frequency> <duration>;
