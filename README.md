@@ -37,4 +37,4 @@ random <lower_frequency> <upper_frequency> <duration>;
 As usual, see `r2d2.sed` for implementation details.
 
 References:
-- [](http://en.wikipedia.org/wiki/R2-D2)
+- http://en.wikipedia.org/wiki/R2-D2
