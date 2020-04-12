@@ -18,7 +18,7 @@ cat example.script | ./r2d2.sed > /dev/dsp
 But in practice, due to some cryptic issue, it cannot generate white noise smoothly, hence I
 suggest to use a workaround:
 ```bash
-cat example.script | ./r2d2.sed | tr 10 '~\n' > /dev/dsp
+cat example.script | ./r2d2.sed | cat > /dev/dsp
 ```
 
 (`> /dev/dsp` should be changed to an appropriate thing that works on your system.)

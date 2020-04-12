@@ -2,7 +2,7 @@
 
 # r2d2 voice in sed. :)
 
-# Usage example: cat example.script | ./r2d2.sed | sed -e 'y/10/~\n/' > /dev/dsp
+# Usage example: cat example.script | ./r2d2.sed | cat > /dev/dsp
 
 # (c) Written by Circiter (mailto:xcirciter@gmail.com).
 # License: MIT.
@@ -175,8 +175,7 @@ bprepare_for_next_command
     h; x; s/^.*@//
 
     # FIXME: Buffer underrun?
-    # But "echo ... | ./r2d2.sed | sed -e 's/1/~/g; s/0/\n/g' > /dev/dsp"
-    # or "echo ... | ./r2d2.sed | tr '10' '~\n' > /dev/dsp" works...
+    # But "echo ... | ./r2d2.sed | cat > /dev/dsp" works...
 
     # Hold space: seed.
 
@@ -210,7 +209,7 @@ bprepare_for_next_command
                 s/_/1/g
                 s/time=0([01]+;)/time=\1/
                 /time=0;/ bprepare_for_next_command
-                /note=true/! {x; p; x}
+                /note=true/! {x; y/10/~\n/; p; y/~\n/10/; x}
                 /note=true/ {
                     # Extract the center element.
                     x; s/^/>/; s/$/</
