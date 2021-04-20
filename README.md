@@ -6,7 +6,7 @@ A [gnu] sed script for imitating r2d2 the robot's "voice". The idea to write thi
 useless code has come to me after I saw Kevin Boone's r2d2-voice project (written in C).
 
 It's not a true speech-synthesizer but it can generate a well-known whisles and random notes,
-as the droid form Star Wars do.
+as the droid from Star Wars do.
 
 # Usage
 
